@@ -1,0 +1,16 @@
+<div >
+ <ul class="d-flex list-unstyled">
+<% @letters.each do |letter|%>
+  <li class="m-3 p-5 bg-primary color text-light" ><%= letter %></li>
+  <%end%>
+<ul>
+
+<div>
+<form action="score" method="POST" data-turbo="false">
+ <label for="word">Enter Word:</label><br>
+  <input type="text" id="word" name="word"><br> <!-- ... -->
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
+
+</div>
+</div>
